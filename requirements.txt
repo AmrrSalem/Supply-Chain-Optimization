@@ -1,0 +1,153 @@
+# Supply Chain Inventory Optimization System - Requirements
+# =======================================================
+# 
+# Core dependencies for the complete supply chain optimization solution
+# including baseline EOQ, stochastic optimization, multi-product optimization,
+# ML-based forecasting, and interactive Streamlit dashboard.
+#
+# Installation: pip install -r requirements.txt
+# Python Version: 3.8+
+
+# Core Data Science Libraries
+# ---------------------------
+pandas>=1.5.0                    # Data manipulation and analysis
+numpy>=1.21.0                    # Numerical computing and arrays
+scipy>=1.9.0                     # Scientific computing and optimization algorithms
+
+# Machine Learning & Statistics
+# -----------------------------
+scikit-learn>=1.1.0              # ML algorithms for demand forecasting
+statsmodels>=0.13.0              # Statistical modeling and time series
+
+# Optimization Libraries
+# ----------------------
+cvxpy>=1.3.0                     # Convex optimization for multi-product problems
+pulp>=2.6.0                      # Linear programming solver (alternative to cvxpy)
+
+# Visualization & Plotting
+# ------------------------
+matplotlib>=3.5.0                # Static plotting and visualizations
+seaborn>=0.11.0                  # Statistical data visualization
+plotly>=5.10.0                   # Interactive plots and dashboards
+
+# Web Application Framework
+# -------------------------
+streamlit>=1.15.0                # Interactive web application framework
+
+# Optional: Advanced ML (uncomment if using deep learning features)
+# -----------------------------------------------------------------
+# tensorflow>=2.10.0             # Deep learning for advanced forecasting
+# torch>=1.12.0                  # PyTorch for neural networks
+# optuna>=3.0.0                  # Hyperparameter optimization
+
+# Development & Testing
+# ---------------------
+jupyter>=1.0.0                   # Jupyter notebooks for analysis
+ipykernel>=6.15.0                # Jupyter kernel support
+
+# Optional: Production Deployment (uncomment for production use)
+# -------------------------------------------------------------
+# fastapi>=0.85.0                # REST API framework for model serving
+# uvicorn>=0.18.0                # ASGI server for FastAPI
+# pydantic>=1.10.0               # Data validation and settings management
+# redis>=4.3.0                   # Caching and session management
+# celery>=5.2.0                  # Distributed task queue
+# prometheus-client>=0.15.0      # Monitoring and metrics
+
+# Optional: Database Connectivity (uncomment as needed)
+# ----------------------------------------------------
+# psycopg2-binary>=2.9.0         # PostgreSQL adapter
+# pymongo>=4.2.0                 # MongoDB driver
+# sqlalchemy>=1.4.0              # SQL toolkit and ORM
+
+# Optional: Cloud & Deployment (uncomment for cloud deployment)
+# -------------------------------------------------------------
+# boto3>=1.24.0                  # AWS SDK
+# azure-storage-blob>=12.13.0    # Azure Blob Storage
+# google-cloud-storage>=2.5.0    # Google Cloud Storage
+# docker>=6.0.0                  # Docker SDK for containerization
+
+# Utilities & Helpers
+# ------------------
+python-dateutil>=2.8.0          # Date/time utilities
+openpyxl>=3.0.0                  # Excel file support
+xlrd>=2.0.0                      # Excel file reading
+requests>=2.28.0                 # HTTP library for data fetching
+
+# Optional: Advanced Analytics (uncomment for enhanced features)
+# -------------------------------------------------------------
+# networkx>=2.8.0                # Graph analysis for supply networks
+# geopandas>=0.11.0              # Geospatial analysis
+# folium>=0.12.0                 # Interactive maps
+# dash>=2.6.0                    # Alternative to Streamlit for dashboards
+
+# Development Tools (optional, for development environment)
+# --------------------------------------------------------
+# black>=22.6.0                  # Code formatting
+# flake8>=5.0.0                  # Code linting
+# pytest>=7.1.0                  # Testing framework
+# pytest-cov>=3.0.0             # Test coverage reporting
+
+# Data Sources & APIs (optional, for real data integration)
+# ---------------------------------------------------------
+# yfinance>=0.1.70               # Yahoo Finance API for financial data
+# fredapi>=0.4.3                # Federal Reserve Economic Data API
+# kaggle>=1.5.12                 # Kaggle API for datasets
+
+# Performance & Optimization (optional, for large-scale deployments)
+# ------------------------------------------------------------------
+# numba>=0.56.0                 # JIT compilation for numerical functions
+# dask>=2022.8.0                # Parallel computing and larger-than-memory datasets
+# ray>=2.0.0                    # Distributed computing framework
+
+# Security & Authentication (optional, for production deployment)
+# --------------------------------------------------------------
+# cryptography>=37.0.0          # Cryptographic recipes and primitives
+# python-jose>=3.3.0            # JSON Web Token implementation
+# passlib>=1.7.4                # Password hashing utilities
+
+# Logging & Monitoring (optional, for production deployment)
+# ---------------------------------------------------------
+# structlog>=22.1.0             # Structured logging
+# sentry-sdk>=1.9.0             # Error tracking and performance monitoring
+
+# ========================================================================
+# INSTALLATION INSTRUCTIONS
+# ========================================================================
+#
+# Basic Installation (minimum requirements):
+# pip install pandas numpy scipy scikit-learn matplotlib streamlit
+#
+# Full Installation (all features):
+# pip install -r requirements.txt
+#
+# Production Installation (with deployment tools):
+# pip install -r requirements.txt
+# # Then uncomment and install production dependencies as needed
+#
+# Development Installation:
+# pip install -r requirements.txt
+# pip install jupyter black flake8 pytest
+#
+# ========================================================================
+# SYSTEM REQUIREMENTS
+# ========================================================================
+#
+# Python Version: 3.8 or higher
+# Memory: 4GB RAM minimum (8GB+ recommended for large datasets)
+# Storage: 2GB free space for libraries and data
+# OS: Windows 10+, macOS 10.14+, or Linux (Ubuntu 18.04+)
+#
+# ========================================================================
+# QUICK START VERIFICATION
+# ========================================================================
+#
+# After installation, verify with:
+# python -c "import pandas, numpy, scipy, sklearn, streamlit; print('All dependencies installed successfully!')"
+#
+# Run the Streamlit app:
+# streamlit run streamlit_app.py
+#
+# Run the optimization demo:
+# python -c "from inventory_optimizer import run_complete_demo; run_complete_demo()"
+#
