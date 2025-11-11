@@ -1,0 +1,100 @@
+# Coverage.py Configuration
+# =========================
+
+[run]
+# Measure branch coverage in addition to statement coverage
+branch = True
+
+# Source code paths to measure
+source = .
+
+# Omit these files/directories from coverage
+omit =
+    */tests/*
+    */test_*.py
+    */__pycache__/*
+    */venv/*
+    */env/*
+    */virtualenv/*
+    */.venv/*
+    */site-packages/*
+    */dist-packages/*
+    setup.py
+    */config/__init__.py
+    */__init__.py
+
+# Run tests in parallel (comment out if causing issues)
+# parallel = True
+
+[report]
+# Target coverage percentage
+fail_under = 80
+
+# Precision for coverage percentage
+precision = 2
+
+# Show lines that weren't executed
+show_missing = True
+
+# Skip covered files in report
+skip_covered = False
+
+# Skip empty files
+skip_empty = True
+
+# Sort report by various metrics
+sort = Cover
+
+# Exclude lines from coverage
+exclude_lines =
+    # Standard pragma
+    pragma: no cover
+
+    # Don't complain about missing debug-only code
+    def __repr__
+    def __str__
+
+    # Don't complain if tests don't hit defensive assertion code
+    raise AssertionError
+    raise NotImplementedError
+
+    # Don't complain if non-runnable code isn't run
+    if __name__ == .__main__.:
+    if __name__ == "__main__":
+
+    # Don't complain about abstract methods
+    @abstract
+    @abstractmethod
+
+    # Don't complain about type checking imports
+    if TYPE_CHECKING:
+    if typing.TYPE_CHECKING:
+
+    # Don't complain about debug code
+    if DEBUG:
+    if settings.DEBUG:
+
+    # Don't complain about pass statements
+    pass
+
+    # Don't complain about ellipsis
+    \.\.\.
+
+[html]
+# Directory for HTML coverage report
+directory = htmlcov
+
+# Title for HTML report
+title = Supply Chain Optimization - Coverage Report
+
+[xml]
+# Output file for XML coverage report
+output = coverage.xml
+
+[json]
+# Output file for JSON coverage report
+output = coverage.json
+# Pretty print JSON
+pretty_print = True
+# Show execution contexts
+show_contexts = True
