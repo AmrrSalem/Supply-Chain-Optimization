@@ -1,0 +1,197 @@
+# Development Dependencies
+# ========================
+# Install with: pip install -r requirements-dev.txt
+#
+# This file contains tools for development, testing, and code quality.
+
+# Include main requirements
+-r requirements.txt
+
+# ============================================================================
+# TESTING
+# ============================================================================
+
+# Testing framework
+pytest>=7.4.0                       # Testing framework
+pytest-cov>=4.1.0                   # Coverage plugin for pytest
+pytest-mock>=3.11.1                 # Mocking plugin for pytest
+pytest-xdist>=3.3.1                 # Parallel test execution
+pytest-timeout>=2.1.0               # Timeout plugin
+pytest-benchmark>=4.0.0             # Benchmarking plugin
+
+# Test utilities
+hypothesis>=6.82.0                  # Property-based testing
+faker>=19.2.0                       # Generate fake test data
+factory-boy>=3.2.1                  # Test fixtures and factories
+
+# Coverage reporting
+coverage[toml]>=7.2.7               # Code coverage measurement
+
+# ============================================================================
+# CODE QUALITY
+# ============================================================================
+
+# Formatting
+black>=23.7.0                       # Code formatter
+isort>=5.12.0                       # Import sorter
+
+# Linting
+flake8>=6.0.0                       # Style guide enforcement
+flake8-docstrings>=1.7.0            # Docstring linting
+flake8-bugbear>=23.7.10             # Find likely bugs
+flake8-comprehensions>=3.14.0       # Better list/set/dict comprehensions
+pylint>=2.17.4                      # Code analysis
+pycodestyle>=2.11.0                 # PEP 8 style checker
+pydocstyle>=6.3.0                   # Docstring style checker
+
+# Type checking
+mypy>=1.4.1                         # Static type checker
+types-requests>=2.31.0              # Type stubs for requests
+types-python-dateutil>=2.8.19       # Type stubs for dateutil
+
+# ============================================================================
+# SECURITY
+# ============================================================================
+
+bandit>=1.7.5                       # Security issue scanner
+safety>=2.3.5                       # Dependency vulnerability scanner
+pip-audit>=2.6.1                    # Audit dependencies for vulnerabilities
+
+# ============================================================================
+# CODE ANALYSIS
+# ============================================================================
+
+radon>=6.0.1                        # Code complexity analysis
+vulture>=2.9.1                      # Find dead code
+mccabe>=0.7.0                       # Complexity checker
+
+# ============================================================================
+# PRE-COMMIT HOOKS
+# ============================================================================
+
+pre-commit>=3.3.3                   # Git hook scripts
+
+# ============================================================================
+# DOCUMENTATION
+# ============================================================================
+
+# Sphinx and extensions
+sphinx>=7.1.0                       # Documentation generator
+sphinx-rtd-theme>=1.3.0             # Read the Docs theme
+sphinx-autodoc-typehints>=1.24.0   # Type hints in docs
+sphinx-copybutton>=0.5.2            # Copy button for code blocks
+myst-parser>=2.0.0                  # Markdown support for Sphinx
+
+# Documentation building
+doc8>=1.1.1                         # Style checker for documentation
+interrogate>=1.5.0                  # Check docstring coverage
+
+# ============================================================================
+# DEVELOPMENT TOOLS
+# ============================================================================
+
+# Environment and configuration
+python-dotenv>=1.0.0                # Environment variable management
+pydantic>=2.1.0                     # Data validation
+
+# Logging (optional, enhanced logging)
+structlog>=23.1.0                   # Structured logging
+
+# Debugging
+ipython>=8.14.0                     # Enhanced Python shell
+ipdb>=0.13.13                       # IPython debugger
+pudb>=2022.1.3                      # Full-screen console debugger
+
+# Profiling
+py-spy>=0.3.14                      # Sampling profiler
+memory-profiler>=0.61.0             # Memory usage profiler
+line-profiler>=4.0.3                # Line-by-line profiling
+
+# ============================================================================
+# BUILD AND PACKAGING
+# ============================================================================
+
+build>=0.10.0                       # Build frontend for packaging
+twine>=4.0.2                        # Upload packages to PyPI
+wheel>=0.41.0                       # Built-package format
+setuptools>=68.0.0                  # Build system
+
+# ============================================================================
+# UTILITIES
+# ============================================================================
+
+# CLI tools
+rich>=13.5.0                        # Rich text and formatting in terminal
+click>=8.1.6                        # Command line interface creation
+tqdm>=4.65.0                        # Progress bars
+
+# File watching
+watchdog>=3.0.0                     # File system event monitoring
+
+# Notebook tools (for development and examples)
+jupyter>=1.0.0                      # Jupyter notebook
+jupyterlab>=4.0.0                   # JupyterLab interface
+nbconvert>=7.7.0                    # Convert notebooks
+nbformat>=5.9.0                     # Notebook format
+
+# ============================================================================
+# PERFORMANCE MONITORING
+# ============================================================================
+
+psutil>=5.9.5                       # System and process utilities
+
+# ============================================================================
+# ADDITIONAL DEV TOOLS
+# ============================================================================
+
+# Git helpers
+gitpython>=3.1.32                   # Git python library
+
+# YAML support
+pyyaml>=6.0.1                       # YAML parser
+
+# JSON tools
+jsonschema>=4.18.0                  # JSON schema validation
+
+# ============================================================================
+# INSTALLATION NOTES
+# ============================================================================
+#
+# Install all development dependencies:
+#   pip install -r requirements-dev.txt
+#
+# Install only testing tools:
+#   pip install pytest pytest-cov pytest-mock
+#
+# Install only code quality tools:
+#   pip install black flake8 mypy pylint
+#
+# Install only documentation tools:
+#   pip install sphinx sphinx-rtd-theme
+#
+# Set up pre-commit hooks:
+#   pre-commit install
+#
+# Run tests:
+#   pytest
+#
+# Check code coverage:
+#   pytest --cov=. --cov-report=html
+#
+# Format code:
+#   black .
+#   isort .
+#
+# Lint code:
+#   flake8 .
+#   pylint *.py
+#
+# Type check:
+#   mypy .
+#
+# Security scan:
+#   bandit -r .
+#   safety check
+#
+# Build documentation:
+#   cd docs && make html
