@@ -59,7 +59,7 @@ def sample_product_data():
 
     data = {
         'product_id': [f'TEST_PROD_{i:03d}' for i in range(10)],
-        'annual_demand': np.random.uniform(1000, 5000, 10),
+        'demand': np.random.uniform(1000, 5000, 10),
         'demand_std': np.random.uniform(50, 200, 10),
         'unit_cost': np.random.uniform(10, 100, 10),
         'order_cost': np.random.uniform(50, 200, 10),
